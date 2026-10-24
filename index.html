@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biriyani Kaksh · Bodra Chowk, Chaibasa</title>
-    <meta
-      name="description"
-      content="Biriyani Kaksh in Tambo, Chaibasa. Dum biryani, thali and curry. Order on WhatsApp."
-    />
+    <title data-bk="title">%BK_TITLE%</title>
+    <meta data-bk="description" name="description" content="%BK_DESCRIPTION%" />
+    <link data-bk="canonical" rel="canonical" href="%BK_URL%" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Biriyani Kaksh" />
+    <meta name="geo.region" content="IN-JH" />
+    <meta name="geo.placename" content="Chaibasa, Jharkhand" />
+    <meta name="geo.position" content="22.5368;85.8207" />
+    <meta name="ICBM" content="22.5368, 85.8207" />
+    <meta name="theme-color" content="#090807" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Biriyani Kaksh" />
+    <meta property="og:locale" content="en_IN" />
+    <meta data-bk="og-title" property="og:title" content="%BK_TITLE%" />
+    <meta data-bk="og-description" property="og:description" content="%BK_DESCRIPTION%" />
+    <meta data-bk="og-url" property="og:url" content="%BK_URL%" />
+    <meta property="og:image" content="%BK_IMAGE%" />
+    <meta property="og:image:alt" content="Dum biryani from Biriyani Kaksh, Chaibasa" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta data-bk="twitter-title" name="twitter:title" content="%BK_TITLE%" />
+    <meta data-bk="twitter-description" name="twitter:description" content="%BK_DESCRIPTION%" />
+    <meta name="twitter:image" content="%BK_IMAGE%" />
+    <link rel="icon" href="/logo.png" />
+    <script data-bk="jsonld" type="application/ld+json">%BK_JSONLD%</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +35,7 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--bk-start-->%BK_FALLBACK%<!--bk-end--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

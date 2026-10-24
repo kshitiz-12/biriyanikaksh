@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MENU } from '../menu'
 import { releaseScroll } from '../motion'
+import Faq from './Faq'
 
 const POINTS = [
   ['Authentic recipes', 'Hyderabadi and Kolkata dum, cooked the way the handi was taught.'],
@@ -51,6 +52,8 @@ export default function HomeMore() {
           ))}
         </ul>
       </section>
+
+      <Faq />
 
       <section className="visit-strip">
         <div>

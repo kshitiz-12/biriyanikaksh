@@ -24,9 +24,10 @@ export default function Hero() {
       <div className="hero-copy">
         <p className="eyebrow">Flavours find a home here</p>
         <h1>
-          <img className="lockup" src="/logo.png" alt="Biriyani कक्ष. More than a meal. It’s an experience." />
+          <img className="lockup" src="/logo.png" alt="Biriyani Kaksh" />
+          <span className="sr-only">Dum biryani in Chaibasa</span>
         </h1>
-        <p className="sub">Aromatic spices, slow-cooked perfection and flavours that stay with you.</p>
+        <p className="sub">Dum biryani in Chaibasa, slow-cooked at Bodra Chowk, Tambo.</p>
         <div className="hero-cta">
           <Link className="btn gold" to="/menu" onClick={releaseScroll}>
             Order Now <span>→</span>

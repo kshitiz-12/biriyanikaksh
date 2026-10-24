@@ -12,6 +12,7 @@ import Menu from './components/Menu'
 import Cart from './components/Cart'
 import Contact from './components/Contact'
 import HomeMore from './components/HomeMore'
+import Seo from './components/Seo'
 
 export default function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function App() {
 
   return (
     <CartProvider>
+      <Seo />
       <Nav />
       <OnRoute />
       <Routes>

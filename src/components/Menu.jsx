@@ -10,11 +10,11 @@ export default function Menu() {
   return (
     <section className="menu" id="menu">
       <header className="menu-hero">
-        <img src="/photos/reveal.png" alt="" />
+        <img src="/photos/reveal.png" alt="Chicken dum biryani at Biriyani Kaksh" />
         <div>
           <p className="eyebrow">Our menu</p>
-          <h2>A plate full of happiness.</h2>
-          <p>Pick a size and add it to the order. The summary goes to the kitchen on WhatsApp.</p>
+          <h1>Biryani menu in Chaibasa.</h1>
+          <p>Hyderabadi dum, Kolkata dum and paneer biryani at Biriyani Kaksh, Bodra Chowk. Pick a size and send the order on WhatsApp.</p>
         </div>
       </header>
       <div className="tabs" role="tablist">
@@ -43,7 +43,7 @@ function Dish({ item, onOpen }) {
   return (
     <li className="card">
       <button className="card-photo" type="button" onClick={onOpen}>
-        <img src={item.img} alt="" />
+        <img src={item.img} alt={item.name} />
       </button>
       <div className="card-body">
         <b>{item.name}</b>
@@ -73,7 +73,7 @@ function Detail({ item, onClose }) {
     <div className="sheet">
       <button className="cart-scrim is-on" type="button" aria-label="Close dish" onClick={onClose} />
       <article>
-        <img src={item.img} alt="" />
+        <img src={item.img} alt={item.name} />
         <div>
           <p className="eyebrow">Dish</p>
           <h3>{item.name}</h3>

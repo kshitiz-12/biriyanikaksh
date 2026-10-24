@@ -20,7 +20,7 @@ export default function Contact() {
     <section className="visit" id="contact">
       <div className="visit-intro">
         <p className="eyebrow">Find us</p>
-        <h2>Find us at Biriyani Kaksh.</h2>
+        <h1>Biriyani Kaksh, Bodra Chowk, Chaibasa.</h1>
         <p className="tag">Flavourful you can’t forget</p>
         <div className="modes">
           <span>Dine in</span>
