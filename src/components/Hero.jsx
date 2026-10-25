@@ -7,7 +7,10 @@ const MARKS = ['Authentic Recipes', 'Slow Dum Cooking', 'Fresh Ingredients', 'Hy
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      <img className="hero-bg" src="/photos/hero-scene.png" alt="" />
+      <picture>
+        <source media="(max-width: 980px)" srcSet="/photos/hero-mobile.jpg" />
+        <img className="hero-bg" src="/photos/hero-scene.png" alt="" />
+      </picture>
       <div className="hero-shade" />
 
       <ol className="rail">

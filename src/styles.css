@@ -767,15 +767,50 @@ img { max-width: 100%; }
   .nav nav.is-open a.is-extra { display: block; }
   .wa-btn span, .wa-btn { display: none; }
   .burger { display: grid; }
-  .hero { flex-direction: column; align-items: flex-start; justify-content: flex-end; padding: 96px 18px 28px; }
-  .hero-shade { background: linear-gradient(180deg, rgba(6, 5, 4, 0.35) 0%, rgba(6, 5, 4, 0.15) 34%, rgba(6, 5, 4, 0.92) 68%); }
-  .hero-bg { object-position: center 18%; }
   .rail { display: none; }
-  .hero-copy { max-width: none; }
-  .hero h1 span:first-child { font-size: 64px; }
-  .hero-foot { position: static; width: 100%; margin-top: 22px; grid-template-columns: 1fr; justify-items: start; gap: 16px; }
-  .scroll-cue { display: none; }
-  .sub { max-width: none; }
+  .hero {
+    min-height: 100svh;
+    padding: 108px 20px 132px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .hero-bg { object-position: center center; }
+  .hero-shade {
+    background: linear-gradient(180deg, rgba(6, 5, 4, 0.72) 0%, rgba(6, 5, 4, 0.28) 24%, transparent 46%, rgba(6, 5, 4, 0.55) 100%);
+  }
+  .hero-copy { display: grid; justify-items: center; width: 100%; }
+  .lockup { width: min(240px, 68vw); }
+  .sub { font-size: 16px; }
+  .hero-cta { justify-content: center; }
+  .hero-foot {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+    width: auto;
+    margin: 0;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+  }
+  .pills { justify-content: center; }
+  .scroll-cue { display: grid; font-size: 10px; }
+  .scroll-cue b { height: 22px; }
+  .menu h1, .visit h1, .menu h2, .visit h2 { font-size: 36px; }
+  .menu-hero { min-height: 0; }
+  .menu-hero img { height: 210px; }
+  .menu-hero div { padding: 16px; }
+  .cards { grid-template-columns: 1fr; }
+  .card img { height: 210px; }
+  .sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .add-order { width: 100%; justify-content: center; }
+  .page {
+    background:
+      linear-gradient(180deg, rgba(8, 7, 6, 0.72), var(--bg) 280px),
+      url(/photos/hero-mobile.jpg) center top / cover no-repeat;
+  }
   .reel, .cards, .sheet article, .visit-grid, .kitchen, .story ul, .contact ul, .paths, .gallery ul { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .visit-grid > img { width: 100%; height: 220px; }
