@@ -781,7 +781,7 @@ img { max-width: 100%; }
     background: linear-gradient(180deg, rgba(6, 5, 4, 0.72) 0%, rgba(6, 5, 4, 0.28) 24%, transparent 46%, rgba(6, 5, 4, 0.55) 100%);
   }
   .hero-copy { display: grid; justify-items: center; width: 100%; }
-  .lockup { width: min(240px, 68vw); }
+  .hero .lockup { display: none; }
   .sub { font-size: 16px; }
   .hero-cta { justify-content: center; }
   .hero-foot {
