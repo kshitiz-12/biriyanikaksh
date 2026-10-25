@@ -1,6 +1,6 @@
 import { ADDRESS, MENU, PHONES } from './menu.js'
 
-export const SITE = 'https://biriyanikaksh.vercel.app'
+export const SITE = 'https://www.biriyanikaksh.in'
 export const IMAGE = `${SITE}/photos/hero-scene.png`
 
 const LAT = 22.5368
