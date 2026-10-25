@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useCart } from '../cart'
 import { orderText, whatsappUrl } from '../menu'
 
@@ -7,6 +7,20 @@ export default function Cart() {
   const [name, setName] = useState('')
   const [note, setNote] = useState('')
   const [sent, setSent] = useState(false)
+
+  useEffect(() => {
+    if (!open) return undefined
+    const onKey = (event) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = previous
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [open, setOpen])
 
   const text = lines.length ? orderText(lines, name, note) : 'Hi Biriyani Kaksh, I would like to place an order.'
   const href = whatsappUrl(text)
@@ -26,8 +40,8 @@ export default function Cart() {
                 Clear all
               </button>
             ) : null}
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close">
-              ×
+            <button className="cart-back" type="button" onClick={() => setOpen(false)}>
+              Back to menu
             </button>
           </div>
         </header>
@@ -101,6 +115,14 @@ export default function Cart() {
           </>
         ) : null}
       </aside>
+      {count > 0 && !open ? (
+        <button className="order-dock" type="button" onClick={() => setOpen(true)}>
+          <span>
+            {count} item{count === 1 ? '' : 's'} · ₹{total}
+          </span>
+          <b>View order</b>
+        </button>
+      ) : null}
     </>
   )
 }

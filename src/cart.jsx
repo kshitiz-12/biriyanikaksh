@@ -52,7 +52,6 @@ export function CartProvider({ children }) {
             },
           ]
         })
-        setOpen(true)
       },
       setQty(key, qty) {
         setLines((prev) =>

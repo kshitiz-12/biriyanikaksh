@@ -451,7 +451,7 @@ img { max-width: 100%; }
 .kit-label { margin: 8px 0 0; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-size: 13px; }
 .kit-label b { margin-right: 10px; }
 
-.menu { padding: 24px 6vw 64px; }
+.menu { padding: 24px 6vw 110px; }
 .menu-hero { position: relative; overflow: hidden; border-radius: 24px; min-height: 280px; margin-bottom: 28px; }
 .menu-hero img { width: 100%; height: 320px; object-fit: cover; display: block; }
 .menu-hero div {
@@ -491,6 +491,17 @@ img { max-width: 100%; }
   color: var(--gold-2);
 }
 .sheet { position: fixed; inset: 0; z-index: 40; display: grid; place-items: end center; }
+.sheet-close {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(12, 10, 8, 0.82);
+  color: var(--gold-2);
+}
 .sheet article {
   position: relative;
   z-index: 41;
@@ -576,7 +587,33 @@ img { max-width: 100%; }
 .cart.is-on { transform: none; }
 .cart header, .cart footer p { display: flex; justify-content: space-between; align-items: center; }
 .cart h2 { margin: 0; font-family: var(--sans); font-size: 28px; font-weight: 500; }
-.cart header button { border: 0; background: none; font-size: 28px; line-height: 1; }
+.cart-back {
+  padding: 8px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gold-2);
+  font-size: 14px;
+}
+.order-dock {
+  position: fixed;
+  z-index: 25;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(420px, calc(100% - 24px));
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #f4d48a;
+  color: #2a1c0c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.order-dock b { font-weight: 600; }
 .cart-empty, .cart-lines span, .cart label { color: var(--muted); }
 .cart-lines { list-style: none; margin: 0; padding: 0; overflow: auto; }
 .cart-lines li { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(228, 194, 122, 0.12); }

@@ -38,7 +38,14 @@ export default function Menu() {
 function Dish({ item, onOpen }) {
   const { add } = useCart()
   const [optionId, setOptionId] = useState(item.options[0].id)
+  const [added, setAdded] = useState(false)
   const option = item.options.find((entry) => entry.id === optionId) || item.options[0]
+
+  const onAdd = () => {
+    add(item, option)
+    setAdded(true)
+    window.setTimeout(() => setAdded(false), 900)
+  }
 
   return (
     <li className="card">
@@ -56,8 +63,8 @@ function Dish({ item, onOpen }) {
             </button>
           ))}
         </div>
-        <button className="add-order" type="button" onClick={() => add(item, option)}>
-          Add to Order · ₹{option.price}
+        <button className="add-order" type="button" onClick={onAdd}>
+          {added ? 'Added' : `Add to Order · ₹${option.price}`}
         </button>
       </div>
     </li>
@@ -73,6 +80,9 @@ function Detail({ item, onClose }) {
     <div className="sheet">
       <button className="cart-scrim is-on" type="button" aria-label="Close dish" onClick={onClose} />
       <article>
+        <button className="sheet-close" type="button" onClick={onClose}>
+          Back to menu
+        </button>
         <img src={item.img} alt={item.name} />
         <div>
           <p className="eyebrow">Dish</p>
